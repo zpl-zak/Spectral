@@ -1,3 +1,5 @@
+double glColor[4]; // @r-lyeh
+
 // TIGR - TIny GRaphics Library - v3.1
 //        ^^   ^^
 //
@@ -6680,7 +6682,11 @@ void tigrGAPIPresent(Tigr* bmp, int w, int h) {
 
     glViewport(0, 0, w, h);
     if (!gl->gl_user_opengl_rendering) {
+#if 1 // @r-lyeh
+        glClearColor(glColor[0], glColor[1], glColor[2], glColor[3]);
+#else
         glClearColor(0, 0, 0, 1);
+#endif
         glClear(GL_COLOR_BUFFER_BIT);
     }
 

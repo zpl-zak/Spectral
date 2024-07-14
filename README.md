@@ -18,17 +18,17 @@ Code is highly experimental and prone to change in the future. I will keep alter
 - [x] ULA/ULA+ graphics.
 - [x] Beeper/AY chips.
 - [x] Kempston mouse. <!-- @todo: AMX mouse.-->
-- [x] Kempston/Fuller/Cursor/Sinclair joysticks.
+- [x] Kempston/Fuller/Cursor/Sinclair joysticks. Gamepad support (Windows, Linux). <!-- @todo: invert joystick/mouse axes/buttons -->
 - [x] RF/CRT experience (not physically accurate though).
-- [x] TAP/TZX/PZX/CSW tapes. Z80/SNA snaps. ROM/IF2 roms. <!-- @todo: tzx info on window title -->
+- [x] TAP/TZX/PZX/CSW tapes. Z80/SNA/SZX snaps. ROM/IF2 roms.
 - [x] DSK/EDSK/TRD/SCL/FDI/MGT/IMG/HOBETA disks.
 - [x] SCR/PNG screenshots. <!-- @todo: ulaplus screenshots. video recording -->
 - [x] ZIP/RAR/GZ archives.
 - [x] AY tunes player.
-- [x] µ765/Betadisk interfaces.
+- [x] Nec µ765/Betadisk interfaces.
 - [x] Auto load games. Auto play/stop tape. TurboROM.
 - [x] Graphical tape browser.
-- [x] 50/60Hz fps lock.
+- [x] 25/30/50/60Hz fps lock.
 - [x] Run-a-head.
 - [x] POK support. <!-- @todo: cheats finder; useful? --> 
 - [x] Gunstick, Lightgun. <!-- Cheetah Defender Lightgun, Magnum Light Phaser, Stack Light Rifle -->
@@ -38,17 +38,18 @@ Code is highly experimental and prone to change in the future. I will keep alter
 - [x] Portable: Windows, Linux, MacOS.
 - [x] Embedded ZXDB.
 - [x] ZXDB Browser. ZXDB Gallery. <!-- @todo: 3d tape cases. -->
+- [x] Can translate game menus from some languages into English.
+- [x] Games can be appended to executable and get a standalone game viewer.
 - [ ] Extra accurate Z80 backend. <!-- @todo: contended mem, contended ports, memptr, snow, Q, floating bus (+2a/+3) -->
 - [ ] Cycle accurate (border, multicolor, etc).
 - [ ] RZX support. <!-- @todo: rzx loadsave http://ramsoft.bbk.org.omegahg.com/rzxform.html -->
-- [ ] Gamepad support. <!-- @todo: invert joystick/mouse axes/buttons -->
 - [ ] MP3s.
 - [ ] Netplay.
 - [ ] Optimized.
 - [x] Unlicensed.
 
 ## Downloads
-Download any binary release from the [bin/ folder](bin/).
+Download any binary release from [Releases section](https://github.com/r-lyeh/Spectral/releases).
 
 Alternatively, you can build the emulator yourself:
 - Windows users double click `MAKE.bat` file.
@@ -70,10 +71,10 @@ Here are some keyboard shortcuts, though:
 - F9+SHIFT: Toggle AY core (2 modes)
 - F11/F12: Quick save/load
 - ALT+ENTER: Fullscreen
-- TAB+CURSORS: Joysticks
+- TAB+CURSORS (or GAMEPAD): Joysticks
 
 ## Credits
-Andre Weissflog, for their many single-header libraries! (Zlib licensed). Peter Sovietov and wermipls, for their accurate AY chip emulator (MIT licensed). Ulrich Doewich and Colin Pitrat, for their uPD765A floppy disk controller (GPL licensed). Marat Fayzullin for their WD1793/FDI controllers (Proprietary). Sergey Bulba for their ay2sna tool (Public Domain). Potapov Vsevolod Viktorovich for their rusfaq website. Andrew Owen and Geoff Wearmouth for their custom ROMs. Simon Owen for their DSK technical websites. Santiago Romero, Philip Kendall, James McKay for their FOSS emulators. Damian Vila for their BESCII truetype font (CC-1.0). lalaoopybee, for their lovely tube shader. Günter Woigk, Juan Carlos González Amestoy and David Colmenero for their floppy sound recordings. The ZXDB devs. The ZX Spectrum Discord folks. All the ZX community!
+Andre Weissflog, for their many single-header libraries! (Zlib licensed). Peter Sovietov and wermipls, for their accurate AY chip emulator (MIT licensed). Ulrich Doewich and Colin Pitrat, for their uPD765A floppy disk controller (GPL licensed). Marat Fayzullin for their WD1793/FDI controllers (Proprietary). Sean Middleditch for their gamepad code (MIT licensed). Sergey Bulba for their ay2sna tool (Public Domain). Potapov Vsevolod Viktorovich for their rusfaq website. Andrew Owen and Geoff Wearmouth for their custom ROMs. Simon Owen for their DSK technical websites. Santiago Romero, Philip Kendall, James McKay for their FOSS emulators. Damian Vila for their BESCII truetype font (CC-1.0). lalaoopybee, for their lovely tube shader. Günter Woigk, Juan Carlos González Amestoy and David Colmenero for their floppy sound recordings. The ZXDB devs. The ZX Spectrum Discord folks. All the ZX community!
 
 ## Unlicense
 This software is released into the [public domain](https://unlicense.org/). Also dual-licensed as [0-BSD](https://opensource.org/licenses/0BSD) or [MIT (No Attribution)](https://github.com/aws/mit-0) for those countries where public domain is a concern (sigh). Any contribution to this repository is implicitly subjected to the same release conditions aforementioned.
@@ -83,7 +84,7 @@ This software is released into the [public domain](https://unlicense.org/). Also
 - [SpecEmu](https://specemu.zxe.io/), my favourite ZX emulator on Windows.
 - [SpectrumComputing](https://spectrumcomputing.co.uk/), [WorldOfSpectrum](https://worldofspectrum.net/), [ZXArt](https://zxart.ee/), [Virtual TRDOS](https://vtrd.in/) and [ZXInfo](https://zxinfo.dk/) are the best online resources (imho).
 - [Crash](https://archive.org/details/crash-magazine), [YourSinclair](https://archive.org/details/your-sinclair-magazine), [SinclairUser](https://archive.org/details/sinclair-user-magazine) and [MicroHobby(ES)](https://archive.org/details/microhobby-magazine) are great old paper magazines.
-- [ZXDB](https://github.com/zxdb/ZXDB), [game maps](https://maps.speccy.cz/), [game cheats](https://www.the-tipshop.co.uk/) and [game longplays](https://www.youtube.com/@rzxarchive).
+- [ZXDB](https://github.com/zxdb/ZXDB), [game maps](https://maps.speccy.cz/), [game cheats](https://www.the-tipshop.co.uk/), [RZX](https://worldofspectrum.net/RZXformat.html)[replays](https://www.rzxarchive.co.uk/) and [game longplays](https://www.youtube.com/@rzxarchive).
 - [Daily ZX videos](https://www.youtube.com/results?search_query=zx+spectrum&sp=CAI%253D), on YouTube.
 
 [![](https://github.com/r-lyeh/Spectral/actions/workflows/build.yml/badge.svg)](https://github.com/r-lyeh/Spectral/actions/workflows/build.yml)

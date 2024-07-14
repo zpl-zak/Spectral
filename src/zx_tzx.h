@@ -519,7 +519,7 @@ int pzx_load(const byte *fp, int len) {
         if( !memcmp(&tag, "PULS", 4) ) {
             for( unsigned num = bytes; num; ) {
                 uint16_t count = 1;
-                uint16_t duration = *(uint16_t*)ptr; ptr += 2; num -= 2;
+                uint32_t duration = *(uint16_t*)ptr; ptr += 2; num -= 2;
                 if( duration > 0x8000 ) {
                     count = duration & 0x7FFF;
                     duration = *(uint16_t*)ptr; ptr += 2; num -= 2;

@@ -615,10 +615,10 @@ char* game_browser_v2() {
         if( (ui_at(ui, ui_x+4+(i&1), ui_y), ui_button(NULL, va("%c%c", (tab && tabs[i] == *tab) ? 5 : 7, tabs[i])) )) {
             if( ui_hover ) {
                 /**/ if(tabs[i] == '\x15') ui_notify( "-Resume-" );
-                else if(tabs[i] == '\x12') ui_notify( "-Favourites-" );
-                else if(tabs[i] == '\x17') ui_notify( "-Browse folder-" );
+                else if(tabs[i] == '\x12') ui_notify( "-List Bookmarks-" );
+                else if(tabs[i] == '\x17') ui_notify( "-Browse local folder-" );
                 else if(tabs[i] == '\x18') ui_notify( "-Search game-" );
-                else if(tabs[i] == '\x19') ui_notify( "-View Mode-" );
+                else if(tabs[i] == '\x19') ui_notify( "-Toggle thumbnails-" );
                 else if(tabs[i] ==    '#') ui_notify( "-List other games-" );
                 else                       ui_notify( va("-List %c games-", tabs[i]) );
             }
@@ -641,7 +641,7 @@ char* game_browser_v2() {
         }
         else
         if( *tab == '\x18' ) {
-            if( zxdb_load(prompt("Game title or ZXDB #ID", "Game title or ZXDB #ID", "0"), 0) ) {
+            if( zxdb_load(prompt("Game search", "Either \"#zxdb-id\", \"*text*search*\", or \"/file.ext\"", "0"), 0) ) {
                 active = 0;
 
                 tab = 0;
@@ -756,6 +756,9 @@ char* game_browser_v2() {
     if( up || page_up )     if(--page < 0) page = 0;
     if( down || page_down ) if(++page >= NUM_PAGES) page = NUM_PAGES;
 
+    if( window_pressed(app, TK_HOME) ) page = 0;
+    if( window_pressed(app, TK_END)  ) page = NUM_PAGES;
+
     static byte frame4 = 0; frame4 = (frame4 + 1) & 3; // 4-frame anim
     static byte frame8 = 0; frame8 = (frame8 + 1) & 7; // 8-frame anim
 
@@ -821,10 +824,10 @@ char* game_browser_v2() {
 
             ui_label(va("  %3d. ", i+1));
 
-            if( ui_click("-Likes-", va("%c\f", "\x10\x12"[!!star])) )
+            if( ui_click("-Toggle bookmark-", va("%c\f", "\x10\x12"[!!star])) )
                 star = !star;
 
-            if( ui_click("-Flags-", va("%c%s", colors[flag], flag == 0 || flag == 3 ? "":"")) )
+            if( ui_click("-Toggle compatiblity flags-\n\2fail\7, \6warn\7, \4good", va("%c%s", colors[flag], flag == 0 || flag == 3 ? "":"")) )
                 flag = (flag + 1) % 4;
 
             cache_set(dbid, (vars & 0xff00) | (flag << 4) | star);
@@ -899,11 +902,11 @@ char* game_browser_v2() {
                 cache_set(dbid, (vars & 0xff00) | (flag << 4) | star);
 
                 if( m.x <= (x+10) && m.y <= (y+11) ) {
-                    ui_notify("-Likes-");
+                    ui_notify("-Toggle bookmark-");
                 }
                 else
                 if( m.x <= (x+10+10-4) && m.y <= (y+11) ) {
-                    ui_notify("-Flags-");
+                    ui_notify("-Toggle compatiblity flags-\n\2fail\7, \6warn\7, \4good");
                 }
                 else {
                     mouse_cursor(2);

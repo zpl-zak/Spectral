@@ -9,8 +9,8 @@
 #define window_printxycol(win, text, x,y, col) tigrPrint(win, tfont, (x)*11,(y)*11, col, "%s", text)
 #define window_pressed(win, keycode) (!!(tigrKeyDown(win, keycode) || tigrKeyHeld(win, keycode)))
 #define window_trigger(win, keycode) (!!tigrKeyDown(win, keycode))
-void    window_override_icons();
 #define window_title(win, title) tigrTitle(win,title)
+void    window_override_icons();
 
 
 int window_keyrepeat(window *app, unsigned char vk) {
@@ -58,7 +58,7 @@ void window_override_icons() {
         appIcon = ExtractIconA(hInstance, __argv[0], 0 );
         if(!appIcon) appIcon = ExtractIconA(hInstance, va("%s.exe", __argv[0]), 0 );
     }
-    SetWindowsHookEx(WH_CBT, window_create_callback, NULL, GetCurrentThreadId());
+    SetWindowsHookEx(WH_CBT, (HOOKPROC)window_create_callback, NULL, GetCurrentThreadId());
 }
 
 #else
@@ -84,7 +84,17 @@ char* prompt(const char *title, const char *body, const char *defaults ) {
 
 int (alert)(const char *title, const char *body) {
 #ifdef _WIN32
-    MessageBoxA(0, body, title, MB_OK);
+
+    HWND hwndParent = GetActiveWindow(); // = GetForegroundWindow();
+
+//    PostMessage(hwndParent, WM_SYSCOMMAND, SC_MINIMIZE, 0);
+    ShowWindow(hwndParent, SW_HIDE);
+
+    MessageBoxA(hwndParent, body, title, MB_OK|MB_SYSTEMMODAL);
+
+//    PostMessage(hwndParent, WM_SYSCOMMAND, SC_RESTORE, 0);
+    ShowWindow(hwndParent, SW_SHOW);
+
 //#elif is(ems)
 //    emscripten_run_script(va("alert('%s')", body));
 #elif defined __linux__ // is(linux)

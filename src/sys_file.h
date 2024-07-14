@@ -13,6 +13,10 @@
 #define realpath(inpath,outpath) _fullpath(outpath, inpath, MAX_PATH - 1)
 #endif
 
+#ifdef __linux__
+#define basename basename__linux__
+#endif
+
 #define DIR_SEP '/'
 #define DIR_MAX MAX_PATH
 

@@ -64,3 +64,7 @@
 #include "3rd_osdialog_gtk3.c"
 #endif
 #endif
+
+//#define GAMEPAD_EXPORT 1
+#define GAMEPAD_IMPLEMENTATION
+#include "3rd_gamepad.h"

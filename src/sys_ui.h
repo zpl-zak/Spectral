@@ -712,8 +712,8 @@ unsigned ui_widths_index(int index) { // returns glyph_width << 24 | left_space 
         uint64_t bits = theFont[index][1];
         unsigned left = 8, right = 8;
         if( bits ) while( bits ) {
-            left = min(left, __builtin_clz(bits<<24) );
-            right = min(right, __builtin_ctz(bits&255) );
+            left = min(left, __builtin_safe_clz(bits<<24) );
+            right = min(right, __builtin_safe_ctz(bits&255) );
             bits >>= 8;
         }
         right *= left != 8;
@@ -863,13 +863,42 @@ void ui_notify_draw() {
         // draw black panel
         int y2 = y-(theFontH+theFontPaddingH);
         TPixel transp = { 0,0,0, 192 * smooth };
-        tigrFillRect(ui_layer, -1,y2, _320+1,_240, transp);
-        tigrLine(ui_layer, -1,y2, _320+1,y2, ((TPixel){255,255,255,240*smooth}));
+        tigrFillRect(ui_layer, -1,y2, _320+2,_240, transp);
+        tigrLine(ui_layer, -1,y2, _320+2,y2, ((TPixel){255,255,255,240*smooth}));
     }
 
     // text
     rgba ui_colors2[] = { ui_00.rgba, ui_notify_color.rgba };
+#if 0
+    // left aligned
     ui_print(ui_layer, (_320-w)/2, y/*_240-(theFontH+theFontPaddingH)*2*/, ui_colors2, ptr);
+#else
+    // centered
+    char *bak = strchr(ptr, '\n');
+    while( bak && *ptr ) {
+        *bak = '\0';
+
+        int dims2 = ui_print(0, 0, 0, NULL, ptr);
+        int w2 = dims2 & 0xFFFF;
+        int h2 = dims2 >> 16;
+        int lines2 = 1 + h2 / theFontH;
+
+        ui_print(ui_layer, (_320-w)/2 + (w-w2)/2, y/*_240-(theFontH+theFontPaddingH)*2*/, ui_colors2, ptr);
+
+        *bak = '\n';
+        ptr = bak + 1;
+        bak = strchr(ptr, '\n');
+        y += 1 + theFontH;
+    }
+    if( *ptr ) {
+        int dims2 = ui_print(0, 0, 0, NULL, ptr);
+        int w2 = dims2 & 0xFFFF;
+        int h2 = dims2 >> 16;
+        int lines2 = 1 + h2 / theFontH;
+
+        ui_print(ui_layer, (_320-w)/2 + (w-w2)/2, y/*_240-(theFontH+theFontPaddingH)*2*/, ui_colors2, ptr);
+    }
+#endif
 }
 
 void ui_frame_end() {

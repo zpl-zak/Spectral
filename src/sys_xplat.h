@@ -52,6 +52,7 @@ typedef int RECT;
 #endif
 #endif
 
+// leading and trailing zeros count. UB if x == 0
 #ifndef __GNUC__
 #include <immintrin.h>
 #define __builtin_clz(x)   _lzcnt_u32(x)
@@ -59,3 +60,9 @@ typedef int RECT;
 #define __builtin_ctz(x)   _tzcnt_u32(x)
 #define __builtin_ctzll(x) _tzcnt_u64(x)
 #endif
+
+// safe leading and trailing zeros count. no UB
+#define __builtin_safe_clz(x)   ((x) ? __builtin_clz(x)   : 32)
+#define __builtin_safe_clzll(x) ((x) ? __builtin_clzll(x) : 64)
+#define __builtin_safe_ctz(x)   ((x) ? __builtin_ctz(x)   : 32)
+#define __builtin_safe_ctzll(x) ((x) ? __builtin_ctzll(x) : 64)
