@@ -1,0 +1,367 @@
+diff --git a/src/res/zxdb/Spectral.db b/src/res/zxdb/Spectral.db
+index 9b701b6..0ffcd84 100644
+--- a/src/res/zxdb/Spectral.db
++++ b/src/res/zxdb/Spectral.db
+@@ -426,7 +426,7 @@
+ /pub/sinclair/games-maps/a/AbadiaDelCrimenLa_PlantaPrincipal.jpg|0|31|Game map
+ /archive.org/download/rzxarchive/abadia.zip|0|63|RZX playback file
+ /zxdb/sinclair/pokes/a/Abadia del Crimen, La (1988)(Opera Soft).pok|0|74|POK pokes file
+-48|1985|Abu Simbel Profanation||Dinamic Software|A03,ZX-Spectrum 48K|8.27|13Arcade Game: Platform|#Beeper Music#Flip-screen#Johnny Jones Saga#Kempston Joystick#Side-view 2D Graphics#Teleportation
++48|1985|Abu Simbel Profanation||Dinamic Software|A03,ZX-Spectrum 48K|8.27|13Arcade Game: Platform|#Archaeology#Beeper Music#Flip-screen#Johnny Jones Saga#Kempston Joystick#Side-view 2D Graphics#Teleportation
+ @?Victor Ruiz Tejedor@?Florentino Pertejo@?Santiago Morga B.@?Snatcho@AAlfonso Azpiri
+ /pub/sinclair/screens/load/a/scr/AbuSimbelProfanation.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/a/AbuSimbelProfanation.gif|0|2|Running screen
+@@ -2735,8 +2735,6 @@
+ @?Ken Wright@AOliver Frey
+ /pub/sinclair/screens/load/a/scr/Austerlitz1805.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/a/Austerlitz1805.gif|0|2|Running screen
+-/pub/sinclair/games-inlays/a/Austerlitz1805_Front.jpg|0|5|Inlay - Front
+-/pub/sinclair/games-inlays/a/Austerlitz1805_Back.jpg|0|6|Inlay - Back
+ /pub/sinclair/games/a/Austerlitz1805.tzx.zip|0|8|Tape image
+ /pub/sinclair/games/a/Austerlitz1805.tap.zip|0|8|Tape image
+ /pub/sinclair/games-info/a/Austerlitz1805.zip|0|28|Instructions
+@@ -12780,7 +12778,7 @@
+ /pub/sinclair/games-maps/e/EggheadToTheRescue.png|0|31|Game map
+ /archive.org/download/rzxarchive/eggheadrescue.rzx|0|63|RZX playback file
+ /zxdb/sinclair/pokes/e/Egghead to the Rescue (1990)(Crash).pok|0|74|POK pokes file
+-1581|1986|The Eidolon|Eidalon|Activision Inc|D04,ZX-Spectrum 48K/128K|7.26|8Arcade Game: Adventure|#AY Sound#Cursor#Interface 2 (right)#Kempston Joystick#Time Travel
++1581|1986|The Eidolon|Eidalon|Activision Inc|D04,ZX-Spectrum 48K/128K|7.26|8Arcade Game: Adventure|#AY Sound#Cursor#Dragon#Interface 2 (right)#Kempston Joystick#Time Travel
+ @?Tony Adams(P.A.W. Software)@?Tony R. Porter(P.A.W. Software)@AKen Macklin
+ /pub/sinclair/screens/load/e/scr/EidolonThe.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/e/EidolonThe.gif|0|2|Running screen
+@@ -28121,6 +28119,7 @@
+ /zxdb/sinclair/entries/0003482/OceanConqueror.jpg|1|5|Inlay - Front
+ /pub/sinclair/games-inlays/Rereleases/o/OceanConqueror(DroSoft).jpg|2|5|Inlay - Front
+ /zxdb/sinclair/entries/0003482/Nautilus(OceanConqueror)(Rack-It)_Media.jpg|1|7|Media scan
++/zxdb/sinclair/entries/0003482/Nautilus.tzx.zip|0|8|Tape image
+ /pub/sinclair/games/o/OceanConqueror.tzx.zip|1|8|Tape image
+ /pub/sinclair/games/o/OceanConqueror.tap.zip|1|8|Tape image
+ /pub/sinclair/games/o/OceanConqueror(DroSoft).tzx.zip|2|8|Tape image
+@@ -31987,7 +31986,7 @@
+ /pub/sinclair/games-maps/p/Pyracurse_3.png|0|31|Game map
+ /archive.org/download/rzxarchive/pyracurse.rzx|0|63|RZX playback file
+ /zxdb/sinclair/pokes/p/Pyracurse (1986)(Hewson Consultants).pok|0|74|POK pokes file
+-3953|1984|Pyramania|||A03,ZX-Spectrum 48K|6.41|13Arcade Game: Platform|#Redefineable keys
++3953|1984|Pyramania|||A03,ZX-Spectrum 48K|6.41|13Arcade Game: Platform|#Archaeology#Redefineable keys
+ @?N. Murray
+ /pub/sinclair/screens/load/p/scr/Pyramania.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/p/Pyramania.gif|0|2|Running screen
+@@ -33521,7 +33520,7 @@
+ /zxdb/sinclair/entries/0004139/Ricochet(EN).txt|0|28|Instructions
+ /archive.org/download/rzxarchive/ricochet.rzx|0|63|RZX playback file
+ /zxdb/sinclair/pokes/r/Ricochet (1987)(Firebird Software).pok|0|74|POK pokes file
+-4142|1985|Riddler's Den||Electric Dreams Software|D03,ZX-Spectrum 48K|6.43|8Arcade Game: Adventure|#Cursor#Interface 2 (right)#Kempston Joystick#Redefineable keys
++4142|1985|Riddler's Den||Electric Dreams Software|D03,ZX-Spectrum 48K|6.43|8Arcade Game: Adventure|#Cursor#Dragon#Interface 2 (right)#Kempston Joystick#Redefineable keys
+ @?David W. Harper@ASteinar Lund
+ /pub/sinclair/screens/load/r/scr/RiddlersDen.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/r/RiddlersDen.gif|0|2|Running screen
+@@ -48217,7 +48216,7 @@
+ /pub/sinclair/screens/in-game/a/AfghanAttack.gif|0|2|Running screen
+ /pub/sinclair/games/a/AfghanAttack.tzx.zip|0|8|Tape image
+ /pub/sinclair/games/a/AfghanAttack.tap.zip|0|8|Tape image
+-5931|9999|Africa||Phantomsoft|A03,ZX-Spectrum 48K|5.5|5Adventure Game: Text-Only|
++5931|1984|Africa||Phantomsoft|A03,ZX-Spectrum 48K|5.5|5Adventure Game: Text-Only|
+ /pub/sinclair/screens/load/a/scr/Africa.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/a/Africa.gif|0|2|Running screen
+ /pub/sinclair/games/a/Africa.tap.zip|0|8|Tape image
+@@ -54213,7 +54212,7 @@
+ /pub/sinclair/games/p/PettigrewChroniclesThePart3.z80.zip|0|10|Snapshot image
+ /pub/sinclair/games/p/PettigrewChroniclesThePart4.z80.zip|0|10|Snapshot image
+ /pub/sinclair/games-info/p/PettigrewChroniclesThe.zip|0|29|Scanned instructions
+-6794|1983|The Pharaoh's Tomb|La Tombe du Pharaon|Phipps Associates|A03,ZX-Spectrum 48K|7.44|6Adventure Game: Text/Illustrated|
++6794|1983|The Pharaoh's Tomb|La Tombe du Pharaon|Phipps Associates|A03,ZX-Spectrum 48K|7.44|6Adventure Game: Text/Illustrated|#Archaeology
+ @?Mike Farley
+ /pub/sinclair/screens/load/p/scr/PharaohsTombThe.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/p/PharaohsTombThe.gif|0|2|Running screen
+@@ -56671,7 +56670,7 @@
+ /pub/sinclair/games-info/t/TwiceShy.txt|0|28|Instructions
+ /archive.org/download/rzxarchive/twiceshy.rzx|0|63|RZX playback file
+ 7144|1984|Twin Kingdom Valley||Bug-Byte Software Ltd|A03,ZX-Spectrum 48K|8.26|6Adventure Game: Text/Illustrated|
+-@?Trevor Hall
++@?Trevor Hall@CJoey Headen
+ /pub/sinclair/screens/load/t/scr/TwinKingdomValley.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/t/TwinKingdomValley.gif|0|2|Running screen
+ /zxdb/sinclair/entries/0007144/TwinKingdomValley.jpg|0|5|Inlay - Front
+@@ -62877,8 +62876,14 @@
+ 9733|1987|Firepower||Armadillo Soft|?03,ZX-Spectrum 48K||7Arcade Game: Action|
+ 9734|1984|First Empire||Red Shift Ltd|?03,ZX-Spectrum 48K||25Strategy Game: War|
+ 9735|1983|Fisherman Fred||Add-On Electronics Ltd|?01,ZX-Spectrum 16K||7Arcade Game: Action|
+-9736|1984|Fishy Dick||Meow Micros|?03,ZX-Spectrum 48K||22Sport Game: Action|
++9736|1984|Fishy Dick||Meow Micros|A03,ZX-Spectrum 48K||22Sport Game: Action|
+ @?Mick Fowler
++/zxdb/sinclair/entries/0009736/FishyDick-LOAD-1.scr|0|1|Loading screen
++/zxdb/sinclair/entries/0009736/FishyDick-LOAD-2.scr|0|1|Loading screen
++/zxdb/sinclair/entries/0009736/FishyDick_Front.jpg|0|5|Inlay - Front
++/zxdb/sinclair/entries/0009736/FishyDick_SideA.jpg|0|7|Media scan
++/zxdb/sinclair/entries/0009736/FishyDick_SideB.jpg|0|7|Media scan
++/zxdb/sinclair/entries/0009736/FishyDick.tzx.zip|0|8|Tape image
+ 9737|1988|Flat Season||Bastec Software|A03,ZX-Spectrum 48K|4|23Sport Game: Management|
+ @?P.K. McManus
+ /pub/sinclair/screens/load/f/scr/FlatSeason.scr|0|1|Loading screen
+@@ -88053,7 +88058,7 @@
+ /pub/sinclair/screens/load/d/scr/DoblonDeLosGoopysEl.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/d/DoblonDeLosGoopysEl.gif|0|2|Running screen
+ /zxdb/sinclair/entries/0023878/DoblonDeLosGoopysEl.tzx.zip|0|8|Tape image
+-23883|2009|The Pharaoh's Shadow||Digital Brains|A03,ZX-Spectrum 48K|6.4|20Game: Puzzle|#Cursor#Freeware (free but copyrighted)#Interface 2 (left)#Interface 2 (right)#Redefineable keys
++23883|2009|The Pharaoh's Shadow||Digital Brains|A03,ZX-Spectrum 48K|6.4|20Game: Puzzle|#Archaeology#Cursor#Freeware (free but copyrighted)#Interface 2 (left)#Interface 2 (right)#Redefineable keys
+ @?Alberto Otero Mato
+ /pub/sinclair/screens/load/p/scr/PharaohsShadowThe.scr|0|1|Loading screen
+ /pub/sinclair/screens/in-game/p/PharaohsShadowThe.gif|0|2|Running screen
+@@ -91763,7 +91768,7 @@
+ @?Simon White
+ /pub/sinclair/screens/in-game/p/Pelmanism_3.gif|0|2|Running screen
+ /pub/sinclair/games/p/Pelmanism.tzx.zip|0|8|Tape image
+-25879|1984|Pharaoh's Tomb|||A03,ZX-Spectrum 48K|3.5|11Arcade Game: Maze|
++25879|1984|Pharaoh's Tomb|||A03,ZX-Spectrum 48K|3.5|11Arcade Game: Maze|#Archaeology
+ @?Richard Sargent
+ /pub/sinclair/screens/in-game/p/PharaohsTomb.gif|0|2|Running screen
+ /pub/sinclair/games/p/PharaohsTomb_2.tzx.zip|0|8|Tape image
+@@ -96098,7 +96103,9 @@
+ /pub/sinclair/games/f/FrankensteinsSchloss.tzx.zip|0|8|Tape image
+ 27563|1985|Kunibert|||A03,ZX-Spectrum 48K|3|7Arcade Game: Action|
+ /pub/sinclair/screens/in-game/k/Kunibert.gif|0|2|Running screen
++/zxdb/sinclair/entries/0027563/Kunibert-RUN-1.scr|0|2|Running screen
+ /pub/sinclair/games/k/Kunibert.tap.zip|0|8|Tape image
++/zxdb/sinclair/entries/0027563/Kunibert.tap.zip|0|8|Tape image
+ 27564|1987|Mine Alert|||A03,ZX-Spectrum 48K|5.5|7Arcade Game: Action|#Side-view 2D Graphics
+ @?Ramon Gallastegui
+ /pub/sinclair/screens/in-game/m/MineAlert.gif|0|2|Running screen
+@@ -110666,7 +110673,7 @@
+ /zxdb/sinclair/entries/0036375/0036375-run-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0036375/POKEforZX.dsk.zip|0|11|Disk image
+ /zxdb/sinclair/entries/0036375/POKEforZX.mgt.zip|0|11|Disk image
+-36376|2020|Last Train to Tranz-Central||Quantum Sheep|S04,ZX-Spectrum 48K/128K||13Arcade Game: Platform|#AY Sound#MPAGD (Multi-Platform Arcade Game Designer)
++36376|2020|Last Train to Tranz-Central||Quantum Sheep|S04,ZX-Spectrum 48K/128K||13Arcade Game: Platform|#AY Sound#Interface 2 (right)#Kempston Joystick#MPAGD (Multi-Platform Arcade Game Designer)#Multiple Boss Fights#Redefineable keys#Side-view 2D Graphics
+ @?Quantum Sheep@MYerzmyey
+ /zxdb/sinclair/entries/0036376/0036376-load-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0036376/0036376-load-2.scr|0|1|Loading screen
+@@ -110940,6 +110947,10 @@
+ 36459|2020|Tristam Island||Hugo Labrande|X08,ZX-Spectrum 128 +3||5Adventure Game: Text-Only|
+ @?Hugo Labrande
+ /zxdb/sinclair/entries/0036459/0036459-run-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0036459/TristamIsland(poly.play)_Front.jpg|1|5|Inlay - Front
++/zxdb/sinclair/entries/0036459/TristamIsland(poly.play)_Back.jpg|1|6|Inlay - Back
++/zxdb/sinclair/entries/0036459/TristamIsland(poly.play)_SideA.jpg|1|7|Media scan
++/zxdb/sinclair/entries/0036459/TristamIsland(poly.play)_SideB.jpg|1|7|Media scan
+ /zxdb/sinclair/entries/0036459/TristamIsland.txt|0|28|Instructions
+ 36461|2020|Advanced Greta Thunberg Simulator|||A03,ZX-Spectrum 48K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2020
+ @?Matt Rudge
+@@ -112250,7 +112261,7 @@
+ @?Kweepa
+ /zxdb/sinclair/entries/0036916/0036916-run-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0036916/NeurobicFootballCup.tap.zip|0|8|Tape image
+-36917|2021|Shovel Adventure||Pat Morita Team|S05,ZX-Spectrum 128K||7Arcade Game: Action|#AY Sound
++36917|2021|Shovel Adventure||Pat Morita Team|S05,ZX-Spectrum 128K||7Arcade Game: Action|#AY Sound#Archaeology
+ @DErrazking@CAntonio Perez@GJarlaxe@SF3M0
+ /zxdb/sinclair/entries/0036917/0036917-load-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0036917/0036917-run-1.scr|0|2|Running screen
+@@ -121515,7 +121526,7 @@
+ /zxdb/sinclair/entries/0042645/CursedCastle-RUN-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0042645/CursedCastle.tap.zip|0|8|Tape image
+ /zxdb/sinclair/entries/0042645/CursedCastle.rzx.zip|0|63|RZX playback file
+-42646|2023|JeT SeT JnR aNd ThE CuRsE oF ThE PhArAoH||Carl Paterson|A03,ZX-Spectrum 48K||13Arcade Game: Platform|
++42646|2023|JeT SeT JnR aNd ThE CuRsE oF ThE PhArAoH||Carl Paterson|A03,ZX-Spectrum 48K||13Arcade Game: Platform|#Archaeology
+ @?Carl Paterson@MDaniel Gromann
+ /zxdb/sinclair/entries/0042646/JeTSeTJnRANdThECuRsEOFThEPhArAoH-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0042646/JeTSeTJnRANdThECuRsEOFThEPhArAoH-RUN-1.scr|0|2|Running screen
+@@ -123928,7 +123939,7 @@
+ 43501|2024|Treasure hunter Bob||Frederick352|X03,ZX-Spectrum 48K||7Arcade Game: Action|
+ @?Frederick352
+ /zxdb/sinclair/entries/0043501/TreasureHunterBob-RUN-1.scr|0|2|Running screen
+-43502|2024|ZXFM|ZX Football Manager|Matthew Begg|X01,ZX-Spectrum 16K||23Sport Game: Management|
++43502|2024|ZXFM|ZX Football Manager|Matthew Begg|X01,ZX-Spectrum 16K||23Sport Game: Management|#BASIC Tenliners 2024#BASIC Tenliners 2024#Sinclair BASIC
+ @?Matthew Begg
+ /zxdb/sinclair/entries/0043502/ZXFM-RUN-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0043502/ZXFM(EN).txt|0|28|Instructions
+@@ -124124,7 +124135,7 @@
+ /zxdb/sinclair/entries/0043628/MagicTower(ES).txt|0|28|Instructions
+ /zxdb/sinclair/entries/0043628/MagicTower.rzx.zip|0|63|RZX playback file
+ /zxdb/sinclair/entries/0043628/MagicTower_2.rzx.zip|0|63|RZX playback file
+-43629|2024|Max Stone - El Secreto de la Gran Piramide||Floppingsoft|X04,ZX-Spectrum 48K/128K||7Arcade Game: Action|#AY Sound#Interface 2 (right)#Kempston Joystick#ZX Game Maker Dev Compo 2024
++43629|2024|Max Stone - El Secreto de la Gran Piramide||Floppingsoft|X04,ZX-Spectrum 48K/128K||7Arcade Game: Action|#AY Sound#Archaeology#Interface 2 (right)#Kempston Joystick#ZX Game Maker Dev Compo 2024
+ @?Juan Leal@MTacha
+ /zxdb/sinclair/entries/0043629/MaxStone-ElSecretoDeLaGranPiramide-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0043629/MaxStone-ElSecretoDeLaGranPiramide-RUN-1.scr|0|2|Running screen
+@@ -124197,7 +124208,7 @@
+ /zxdb/sinclair/entries/0043647/XantelJonesEnLaTablaVerdosa-RUN-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0043647/XantelJonesEnLaTablaVerdosa(ES).txt|0|28|Instructions
+ /zxdb/sinclair/entries/0043647/XantelJonesEnLaTablaVerdosa.rzx.zip|0|63|RZX playback file
+-43655|2024|ZXnake||Moisés Garín Escrivá|A01,ZX-Spectrum 16K||7Arcade Game: Action|#BASIC Tenliners 2024#In-game Cutscenes#Sinclair BASIC
++43655|2024|ZXnake||Moisés Garín Escrivá|A01,ZX-Spectrum 16K||7Arcade Game: Action|#BASIC Tenliners 2024#BASIC Tenliners 2024#In-game Cutscenes#Sinclair BASIC
+ @?Moisés Garín Escrivá
+ /zxdb/sinclair/entries/0043655/ZXnake-RUN-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0043655/ZXnake.tap.zip|0|8|Tape image
+@@ -124383,10 +124394,18 @@
+ @?Marco Innocenti(SpaceWhale)
+ /zxdb/sinclair/entries/0043743/A1RL0CK-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0043743/A1RL0CK-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0043743/A1RL0CK_Front.jpg|0|5|Inlay - Front
++/zxdb/sinclair/entries/0043743/A1RL0CK_Back.jpg|0|6|Inlay - Back
++/zxdb/sinclair/entries/0043743/A1RL0CK_SideA.jpg|0|7|Media scan
++/zxdb/sinclair/entries/0043743/A1RL0CK_SideB.jpg|0|7|Media scan
+ 43744|2023|The Ruin of 0ceanus Pr1me|The Ruin of Oceanus Prime|poly.play|X08,ZX-Spectrum 128 +3||5Adventure Game: Text-Only|
+ @?Marco Innocenti
+ /zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe_Front.jpg|0|5|Inlay - Front
++/zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe_Back.jpg|0|6|Inlay - Back
++/zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe_SideA.jpg|0|7|Media scan
++/zxdb/sinclair/entries/0043744/RuinOf0ceanusPr1meThe_SideB.jpg|0|7|Media scan
+ 43745|1984|The St. Petersburg Ikon|Zagorsk||03,ZX-Spectrum 48K||5Adventure Game: Text-Only|
+ @?John Ransley
+ 43746|2024|The Mijadore 2 - The Key||EdD|X05,ZX-Spectrum 128K||7Arcade Game: Action|#AY Sound#Interface 2 (right)#Kempston Joystick#MPAGD (Multi-Platform Arcade Game Designer)#Mijadore#Redefineable keys#Side-view 2D Graphics
+@@ -124574,7 +124593,7 @@
+ @?Alan Pratt
+ 43806|1985|Crunchy Muncher|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|#Sinclair BASIC
+ @?Wayne Starr@?James Morgan
+-43807|2024|Pyramid Escape||IrataHack|X04,ZX-Spectrum 48K/128K||13Arcade Game: Platform|#AY Sound#Beeper Music#Interface 2 (right)#Kempston Joystick#Redefineable keys
++43807|2024|Pyramid Escape||IrataHack|X04,ZX-Spectrum 48K/128K||13Arcade Game: Platform|#AY Sound#Archaeology#Beeper Music#Interface 2 (right)#Kempston Joystick#Redefineable keys
+ @CIrataHack@Gcrayon@GTRIXS@ARichard D. Langford@MAki
+ /zxdb/sinclair/entries/0043807/PyramidEscape-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0043807/PyramidEscape-RUN-1.scr|0|2|Running screen
+@@ -124964,7 +124983,10 @@
+ 43968|1986|Caravana|||03,ZX-Spectrum 48K||15Arcade Game: Shoot-em-up|
+ @?Carlos Tavares Silva
+ /zxdb/sinclair/entries/0043968/Caravana-RUN-1.scr|0|2|Running screen
+-43971|1983|Frogger|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++43971|1983|Frogger|||A02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++/zxdb/sinclair/entries/0044039/Frogger-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044039/Frogger(16K).tap.zip|0|8|Tape image
++/zxdb/sinclair/entries/0044039/Frogger(48K).tap.zip|0|8|Tape image
+ 43975|2019|Crap Dice 2||AsteroideZX|A03,ZX-Spectrum 48K||28Casual Game: Dice|
+ @?AsteroideZX
+ /zxdb/sinclair/entries/0043975/CrapDice2-LOAD-1.scr|0|1|Loading screen
+@@ -125108,40 +125130,117 @@
+ /zxdb/sinclair/entries/0044033/TommyAndTheQuestForJustice-LOAD-1.scr|0|1|Loading screen
+ /zxdb/sinclair/entries/0044033/TommyAndTheQuestForJustice-RUN-1.scr|0|2|Running screen
+ /zxdb/sinclair/entries/0044033/TommyAndTheQuestForJustice_Front.png|0|5|Inlay - Front
+-44035|2025|US Route 66||Avlisoft|?03,ZX-Spectrum 48K||24Strategy Game: Management|
++44035|2025|US Route 66||Avlisoft|A03,ZX-Spectrum 48K||24Strategy Game: Management|
+ @?José Manuel Domingues Silva
+-44036|2025|Lunar Patrol||GabAm|?04,ZX-Spectrum 48K/128K||15Arcade Game: Shoot-em-up|#AY Sound#Horizontal Scrolling#Side-view 2D Graphics
++/zxdb/sinclair/entries/0044035/USRoute66-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044035/USRoute66.tap.zip|0|8|Tape image
++44036|2025|Lunar Patrol||GabAm|A04,ZX-Spectrum 48K/128K||15Arcade Game: Shoot-em-up|#AY Sound#Horizontal Scrolling#Side-view 2D Graphics
+ @CGabriele Amore@MLee Bee@CGoodboy@SIsaías Díaz Toledano
++/zxdb/sinclair/entries/0044036/LunarPatrol-LOAD-1.scr|0|1|Loading screen
++/zxdb/sinclair/entries/0044036/LunarPatrol-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044036/LunarPatrol.tap.zip|0|8|Tape image
+ 44037|2025|MoonRN||Snauts|X04,ZX-Spectrum 48K/128K||7Arcade Game: Action|#AY Sound#Horizontal Scrolling#One-Button Game#Side-view 2D Graphics
+ @?Snauts@MHazard
+-44038|2025|Infecto|||01,ZX-Spectrum 16K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2025#One-Button Game
++/zxdb/sinclair/entries/0044037/MoonRN-RUN-1.scr|0|2|Running screen
++44038|2025|Infecto|||A01,ZX-Spectrum 16K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2025#One-Button Game
+ @?Kerl
+-44039|1983|Frogger|||03,ZX-Spectrum 48K||7Arcade Game: Action|
+-44041|1983|Superhirn|||02,ZX-Spectrum 16K/48K||17Game: Board|
++/zxdb/sinclair/entries/0044038/Infecto-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044038/Infecto.tap.zip|0|8|Tape image
++44041|1983|Superhirn|||A02,ZX-Spectrum 16K/48K||17Game: Board|
+ @?Christian Boehm
+-44042|1983|UFO|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
+-44043|1983|Lift|||02,ZX-Spectrum 16K/48K||20Game: Puzzle|
++/zxdb/sinclair/entries/0044041/Superhirn-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044041/Superhirn.tap.zip|0|8|Tape image
++44042|1983|UFO|||A02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++/zxdb/sinclair/entries/0044042/UFO-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044042/UFO.tap.zip|0|8|Tape image
++44043|1983|Lift|||A02,ZX-Spectrum 16K/48K||20Game: Puzzle|
++/zxdb/sinclair/entries/0044043/Lift-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044043/Lift.tap.zip|0|8|Tape image
+ 44044|1983|Bogen Schutze|Bogen||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
+ @?H. J. Kroenke
+-44045|1985|Isola|||03,ZX-Spectrum 48K||17Game: Board|
++44045|1985|Isola|||A03,ZX-Spectrum 48K||17Game: Board|
+ @?João Duarte
++/zxdb/sinclair/entries/0044045/Isola-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044045/Isola.tap.zip|0|8|Tape image
+ 44047|1984|Laser|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
+ @?Jörg Mueller
+-44049|1984|Irrgarten|||02,ZX-Spectrum 16K/48K||11Arcade Game: Maze|
++44049|1984|Irrgarten|||A02,ZX-Spectrum 16K/48K||11Arcade Game: Maze|
+ @?C. Einhardt
+-44050|1984|Steine Schieben|||02,ZX-Spectrum 16K/48K||17Game: Board|
++/zxdb/sinclair/entries/0044049/Irrgarten-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044049/Irrgarten.tap.zip|0|8|Tape image
++44050|1984|Steine Schieben|||A02,ZX-Spectrum 16K/48K||17Game: Board|
++/zxdb/sinclair/entries/0044050/SteineSchieben-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044050/SteineSchieben.tap.zip|0|8|Tape image
+ 44051|1984|Deutschlandquiz|||03,ZX-Spectrum 48K||31Casual Game: Quiz|
+ @?Otto Warnecke
+-44053|1984|Air Battle|||03,ZX-Spectrum 48K||7Arcade Game: Action|
++44053|1984|Air Battle|||A03,ZX-Spectrum 48K||7Arcade Game: Action|
+ @?M. Hoppe
+-44054|1985|Torres de Hanoi|||03,ZX-Spectrum 48K||20Game: Puzzle|
++/zxdb/sinclair/entries/0044053/AirBattle-LOAD-1.scr|0|1|Loading screen
++/zxdb/sinclair/entries/0044053/AirBattle-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044053/AirBattle.tap.zip|0|8|Tape image
++/zxdb/sinclair/entries/0044053/AirBattle(EN).txt|0|28|Instructions
++44054|1985|Torres de Hanoi|||A03,ZX-Spectrum 48K||20Game: Puzzle|
+ @?Paulo Pereira
+-44057|1984|Ganymede|Ganeymede III||03,ZX-Spectrum 48K||5Adventure Game: Text-Only|
++/zxdb/sinclair/entries/0044054/TorresDeHanoi-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044054/TorresDeHanoi.tap.zip|0|8|Tape image
++44057|1984|Ganymede|Ganeymede III||A03,ZX-Spectrum 48K||5Adventure Game: Text-Only|
+ @?Horst Franke
+-44059|2025|CRPLetter|||01,ZX-Spectrum 16K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2025
++/zxdb/sinclair/entries/0044057/Ganymede-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044057/Ganymede.tap.zip|0|8|Tape image
++44059|2025|CRPLetter|||A01,ZX-Spectrum 16K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2025
+ @?Packobilly
+-44061|1984|Superradio|||03,ZX-Spectrum 48K||21Game: Simulation|
++/zxdb/sinclair/entries/0044059/CRPLetter-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044059/CRPLetter.tap.zip|0|8|Tape image
++44061|1984|Superradio|||A03,ZX-Spectrum 48K||21Game: Simulation|
+ @?Supersoft [DE]
+-44063|1984|Springer-Spiel|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++/zxdb/sinclair/entries/0044061/Superradio-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044061/Superradio.tap.zip|0|8|Tape image
++44063|1984|Springer-Spiel|||A02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
+ @?Otto Warnecke
++/zxdb/sinclair/entries/0044063/Springer-Spiel-RUN-1.scr|0|2|Running screen
++/zxdb/sinclair/entries/0044063/Springer-Spiel.tap.zip|0|8|Tape image
+ 44064|1985|Plong|||03,ZX-Spectrum 48K||7Arcade Game: Action|
++44065|2025|Plyuk||RetroSouls|X05,ZX-Spectrum 128K||7Arcade Game: Action|#AY Sound#Interface 2 (right)#Kempston Joystick#Multicolour (Rainbow Graphics)#Side-view 2D Graphics
++@CDenis Grachev@MOleg Nikitin@SIvan Seleznev
++44066|2025|Throbby Heartache||KTB Productions|X03,ZX-Spectrum 48K||13Arcade Game: Platform|#Beeper Music#Beepola#Interface 2 (right)#Kempston Joystick#MPAGD (Multi-Platform Arcade Game Designer)#Redefineable keys#Side-view 2D Graphics
++@?io.rrwm
++44067|1985|Mr. Pacman|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|#Cursor#Kempston Joystick
++@?Ralf Schenke
++44069|1985|Rotate|||03,ZX-Spectrum 48K||7Arcade Game: Action|
++@?Stephan Nicolaus
++44070|1985|Chrpp|||03,ZX-Spectrum 48K||7Arcade Game: Action|
++44071|1986|Hole Jumper|||03,ZX-Spectrum 48K||7Arcade Game: Action|
++@?Mark Müller
++44072|1986|Sneakers|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@?Ralf Schenke
++44073|1986|Hefro-Horse|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@?Alex Henrich
++44075|1986|Maggot der Riesenwurm|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@?A. Nürnberger
++44076|1986|Laser Maze|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@?Zuheir Urwani
++44077|2025|Math Gauntlet|||03,ZX-Spectrum 48K||7Arcade Game: Action|#CSSCGC Crap Games Contest 2025
++@?Kerl@?Paradigm Shifter
++44080|2025|Jurl||Tonsomo Entertainment|X03,ZX-Spectrum 48K||7Arcade Game: Action|#Beeper Music#Interface 2 (right)#Kempston Joystick#Redefineable keys
++@?Johnny Blanchard
++44081|1995|Nonstop||MIRAsoft|?03,ZX-Spectrum 48K||6Adventure Game: Text/Illustrated|
++@?Miroslav Náplava
++44082|2025|The House That Wept||ICreateworlds|X03,ZX-Spectrum 48K||6Adventure Game: Text/Illustrated|
++@?Luís Peres
++44083|1984|Walter il raccoglimele||Gruppo Editoriale Jackson|?02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@CIvano Parbuono
++44085|1985|Maze Chasers|Manic Pumpkin||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|#Sinclair BASIC
++@?Christopher Price
++44086|1985|Memory Boxes|||02,ZX-Spectrum 16K/48K||20Game: Puzzle|
++@?R. Manga
++44088|1985|Micky's Mine Field|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++44089|1984|Minestorm|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|
++@?Ian Dando
++44092|1984|Moonlander|Passenger Rescue||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|#Sinclair BASIC
++@?Steven Brown
++44094|1984|Mortar Platoon|||02,ZX-Spectrum 16K/48K||7Arcade Game: Action|#Sinclair BASIC
++@?C. L. Baker
++44096|1984|Mystery Maze|||02,ZX-Spectrum 16K/48K||11Arcade Game: Maze|#Sinclair BASIC
++@?Jason Crouch
++44097|2024|Bigfoot vs Tanque||Xave|?01,ZX-Spectrum 16K||7Arcade Game: Action|#BASIC Tenliners 2024#Sinclair BASIC
++@?Xave
