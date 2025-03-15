@@ -136,11 +136,11 @@ if "%1"=="deb" (
 )
 
 if "%1"=="opt" (
+    rem /dynamicdeopt 
     rem do not use /O1 or /O2 below. ayumi drums will be broken in AfterBurner.dsk otherwise (not anymore?)
     rem do not use /O2 below. +3 FDC may behave weirdly otherwise (AfterBurner.dsk/GNG.dsk)
-    rem do not use /arch:AVX2 to maximize compatibility. see issue #4
     rem false positives: +1 (vs19) .. +4 (vs22) - secureage (bc of DNDEBUG and optimization flags lol)
-    call make nil /Ox /MT /DNDEBUG /GL /GF /arch:AVX %ALL_FROM_2ND% || goto error
+    call make nil /Ox /MT /DNDEBUG /GL /GF %ALL_FROM_2ND% || goto error
     rem false positives: +12
     rem where /q upx.exe && upx Spectral.exe
     rem false positives: +2 - crowdstrike falcon, cylance
@@ -180,8 +180,12 @@ set "cc=clang-cl -Wno-multichar -Wno-unused-value -Wno-macro-redefined -Wno-impl
 (where /q clang-cl || set "cc=cl" >nul 2>nul)
 )
 
-echo !cc! src\app.c src\sys_window.cc -I src /FeSpectral.exe %ALL_FROM_2ND%
-     !cc! src\app.c src\sys_window.cc -I src /FeSpectral.exe %ALL_FROM_2ND% || goto error
+rem X86 use /arch:SSE2 to maximize performance
+rem X64 do not use /arch:AVX2 to maximize compatibility. see issue #4
+if "%__DOTNET_PREFERRED_BITNESS%"=="32" (set ARCH=/arch:SSE2) else (set ARCH=/arch:AVX)
+
+echo !cc! src\app.c src\sys_window.cc -I src /FeSpectral.exe !ARCH! %ALL_FROM_2ND%
+     !cc! src\app.c src\sys_window.cc -I src /FeSpectral.exe !ARCH! %ALL_FROM_2ND% || goto error
 
 
 for /F "skip=1 delims=" %%F in ('
@@ -194,7 +198,7 @@ for /F "skip=1 delims=" %%F in ('
     )
 )
 where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-file-version "!year!.!month!.!today!.!today!!month!"
-where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-product-version "1.03 Spectral"
+where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-product-version "1.04 Spectral-WIP"
 where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-icon src\res\img\noto_1f47b.ico
 rem where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-version-string "version" "value"
 rem where /q rcedit-x64.exe && rcedit-x64 "Spectral.exe" --set-resource-string "version" "value"
