@@ -59,7 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./Spectral-Windows.exe
+          asset_path: ./Spectral.exe
           asset_name: Spectral-Windows.exe
           asset_content_type: application/vnd.microsoft.portable-executable
 
@@ -80,7 +80,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./Spectral-Ubuntu.linux
+          asset_path: ./Spectral.linux
           asset_name: Spectral-Ubuntu.linux
           asset_content_type: application/x-executable
 
