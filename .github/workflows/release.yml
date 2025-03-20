@@ -61,6 +61,7 @@ jobs:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
           asset_path: ./Spectral-Windows.exe
           asset_name: Spectral-Windows.exe
+          asset_content_type: application/vnd.microsoft.portable-executable
 
   build-ubuntu:
     needs: create-release
@@ -81,6 +82,7 @@ jobs:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
           asset_path: ./Spectral-Ubuntu.linux
           asset_name: Spectral-Ubuntu.linux
+          asset_content_type: application/x-executable
 
   build-macos:
     needs: create-release
