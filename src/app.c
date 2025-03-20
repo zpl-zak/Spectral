@@ -1030,7 +1030,7 @@ char* game_browser(int version) { // returns true if loaded
         mouse_cursor(1);
     }
 
-    const char *entry = version == 2 ? game_browser_v2() : game_browser_v1();
+    char *entry = version == 2 ? game_browser_v2() : game_browser_v1();
     if( entry ) {
         return strendi(entry, "/") ? rescan(entry), NULL : entry;
     }
@@ -1420,6 +1420,8 @@ if( do_runahead == 0 ) {
         }
 
         // rec before/after UI,
+        int rec();
+        int gui();
         if( ZX_PRINTUI )
             gui(dev_status), rec();
         else
