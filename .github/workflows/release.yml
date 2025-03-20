@@ -1,0 +1,93 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g. v1.05)'
+        required: true
+      release_notes:
+        description: 'Release notes'
+        required: true
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          release_name: Spectral ${{ github.event.inputs.version }}
+          body: ${{ github.event.inputs.release_notes }}
+          draft: false
+          prerelease: false
+
+  build-windows:
+    needs: create-release
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+      - name: Setup Developer Command Prompt
+        uses: ilammy/msvc-dev-cmd@v1
+      - name: Build Windows
+        run: ./MAKE.bat
+      - name: Archive Windows Artifact
+        run: |
+          powershell Compress-Archive -Path Spectral.exe -DestinationPath Spectral-Windows.zip
+      - name: Upload Windows Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create-release.outputs.upload_url }}
+          asset_path: ./Spectral-Windows.zip
+          asset_name: Spectral-Windows.zip
+          asset_content_type: application/zip
+
+  build-ubuntu:
+    needs: create-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libgtk-3-dev
+      - name: Build Ubuntu
+        run: sh MAKE.bat
+      - name: Archive Ubuntu Artifact
+        run: tar -czvf Spectral-Ubuntu.tar.gz Spectral.linux
+      - name: Upload Ubuntu Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create-release.outputs.upload_url }}
+          asset_path: ./Spectral-Ubuntu.tar.gz
+          asset_name: Spectral-Ubuntu.tar.gz
+          asset_content_type: application/gzip
+
+  build-macos:
+    needs: create-release
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build macOS
+        run: sh MAKE.bat
+      - name: Upload macOS Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create-release.outputs.upload_url }}
+          asset_path: ./Spectral.dmg
+          asset_name: Spectral-macOS.dmg
+          asset_content_type: application/x-apple-diskimage
