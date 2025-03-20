@@ -389,7 +389,13 @@ void rescan(const char *folder) {
     {
         numok=0,numwarn=0,numerr=0;
 
-        for( dir *d = dir_open(folder, "r"); d; dir_close(d), d = NULL ) {
+#if 1
+        const char *recursive = NULL;
+#else
+        const char *recursive = "r";
+#endif
+
+        for( dir *d = dir_open(folder, recursive); d; dir_close(d), d = NULL ) {
             for( unsigned count = 0, end = dir_count(d); count < end; ++count ) {
                 if( !dir_file(d, count) ) continue;
 
@@ -405,8 +411,20 @@ void rescan(const char *folder) {
                 }
             }
             for( unsigned count = 0, end = dir_count(d); count < end; ++count ) {
+#if 1
+                int is_file = dir_file(d,count);
+                const char *fname = dir_name(d, count);
+                if( is_file ? file_is_supported(fname,ALL_FILES) : 1 ) {
+                    // append
+                    ++numgames;
+                    games = realloc(games, numgames * sizeof(char*) );
+                    games[numgames-1] = strdup(fname);
+                    //
+                    dbgames = realloc(dbgames, numgames * sizeof(char*) );
+                    dbgames[numgames-1] = is_file ? db_get(fname) : 0;
+                }
+#else
                 if( !dir_file(d, count) ) continue;
-
                 const char *fname = dir_name(d, count);
                 if( file_is_supported(fname,ALL_FILES) ) {
                     // append
@@ -417,6 +435,8 @@ void rescan(const char *folder) {
                     dbgames = realloc(dbgames, numgames * sizeof(char*) );
                     dbgames[numgames-1] = db_get(fname);
                 }
+#endif
+
             }
         }
     }
@@ -450,12 +470,16 @@ char* game_browser_v1() {
     if (!numgames) return 0;
     if( scroll < 0 ) scroll = 0;
     for( int i = scroll; i < numgames && i < scroll+ENTRIES; ++i ) {
+        const char *sep = strrchr(games[i], DIR_SEP);
+        int is_dir = sep[1] == '\0';
+        if( is_dir ) while(0[--sep] != '/');
+
         const char starred = dbgames[i] >> 8 ? (char)(dbgames[i] >> 8) : ' ';
-        sprintf(buffer, "%c%c %3d.%s%s\n", 
+        sprintf(buffer, "%c%c %3d.%s%s%s\n", 
             (dbgames[i] & 0x7F) == 0 ? '\x7' :        // untested
             (dbgames[i] & 0x7F) == 1 ? '\x4' :        // ok
             (dbgames[i] & 0x7F) == 2 ? '\x2' : '\x6', // bug:warn
-            starred, i+1, i == selected ? " > ":" ", 1+strrchr(games[i], DIR_SEP) );
+            starred, i+1, i == selected ? " > ":" ", is_dir ? FOLDER_STR " " : "", 1+sep );
 
         ui_at(ui, 1*11, (3+(i-scroll-1)) * 11 );
         if( ui_click(NULL, buffer) ) selected = i, clicked = 1;

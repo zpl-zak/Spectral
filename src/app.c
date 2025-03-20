@@ -1030,8 +1030,10 @@ char* game_browser(int version) { // returns true if loaded
         mouse_cursor(1);
     }
 
-    if( version == 1 ) return game_browser_v1();
-    if( version == 2 ) return game_browser_v2();
+    const char *entry = version == 2 ? game_browser_v2() : game_browser_v1();
+    if( entry ) {
+        return strendi(entry, "/") ? rescan(entry), NULL : entry;
+    }
 
     return NULL;
 }

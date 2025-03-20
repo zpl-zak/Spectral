@@ -136,6 +136,7 @@ if "%1"=="deb" (
 )
 
 if "%1"=="opt" (
+    rem /dynamicdeopt 
     rem do not use /O1 or /O2 below. ayumi drums will be broken in AfterBurner.dsk otherwise (not anymore?)
     rem do not use /O2 below. +3 FDC may behave weirdly otherwise (AfterBurner.dsk/GNG.dsk)
     rem false positives: +1 (vs19) .. +4 (vs22) - secureage (bc of DNDEBUG and optimization flags lol)
